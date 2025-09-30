@@ -4,6 +4,6 @@ namespace Core.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {
-  IGenericRepository<T> Repository<T>() where T : BaseEntity;
-  Task<bool> Complete();
+    IGenericRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity;
+    Task<bool> Complete();
 }
